@@ -1,3 +1,27 @@
-<p>
-  client-edit works!
-</p>
+<form novalidate [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div class="row">
+    <div class="col-md-12 flex-center">
+      <div class="card">
+        <img class="card-img-top" src="http://placeholder.pics/svg/200" alt="Card image cap">
+      </div>
+    </div>
+
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <label for="name" class="grey-text">First Name</label>
+      <input type="email" id="name" name="firstName" class="form-control" formControlName="firstName">
+    </div>
+
+    <div class="col-md-6">
+      <label for="surname" class="grey-text">Last Name</label>
+      <input type="password" id="surname" name="surname" class="form-control" formControlName="lastName">
+    </div>
+    <div class="col-md-12">
+      <div class="text-center mt-4">
+        <a class="btn btn-elegant btn-sm" href="#" [routerLink]="['/clients/', 'qwertyuiop', 'overview']">Cancel</a>
+        <button class="btn btn-danger btn-sm" [disabled]="save" type="submit">{{btnText}}</button>
+      </div>
+    </div>
+  </div>
+</form>

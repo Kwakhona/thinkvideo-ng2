@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {ComponentsModule} from './components/components.module';
 import {routes} from './app.routes';
 import {RouterModule} from '@angular/router';
+import {SharedModule} from './components/shared.module';
+import {LocalStorageModule} from 'angular-2-local-storage';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,15 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(routes, {useHash: true}),
-    ComponentsModule
+    ComponentsModule,
+    SharedModule,
+    LocalStorageModule.withConfig({
+      storageType: 'localStorage'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [ComponentsModule],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
