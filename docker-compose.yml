@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  # The Application
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /code
+    volumes:
+      - ./:/code
+    ports:
+      - 8080:80

@@ -1,0 +1,56 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark danger-color">
+  <a class="navbar-brand" href="#">
+    Think Video
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-search"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-user"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"*ngFor="let item of chartOptions.data; let i=index;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><a>Client {{i+1}}</a></h5>
+          <div style="display: block">
+            <canvas mdbChart
+              [chartType]="item.chartType"
+              [data]="item.chartData"
+              [labels]="item.chartLabels"
+              [colors]="item.chartColors"
+              [options]="item.chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

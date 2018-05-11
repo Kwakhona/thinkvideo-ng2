@@ -1,0 +1,32 @@
+<div class="clearfix"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <img src="assets/img/logo.png">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-4 col-lg-6 col-md-10 col-sm-12 mx-auto flex-center">
+      <div class="card card-body">
+        <form novalidate [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+          <p class="h5 text-left mb-4">Login</p>
+          <!-- Default input email -->
+          <label for="username" class="grey-text">Username</label>
+          <input
+            type="text" id="username" class="form-control" name="username" formControlName="username" required>
+          <br>
+
+          <!-- Default input password -->
+          <label for="password" class="grey-text">Password</label>
+          <input type="password" id="password" class="form-control" name="password" formControlName="password" required>
+          <div class="flex-row text-left">
+            <a class="card-link btn-link"><u>Forgot password?</u></a>
+          </div>
+          <div class="text-right mt-4">
+            <button class="btn btn-danger btn-sm" type="submit" [disabled]="!userForm.valid || sent">{{btnText}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
