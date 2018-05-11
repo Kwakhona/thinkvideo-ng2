@@ -32,8 +32,8 @@ export class DashboardComponent implements OnInit {
           hoverBorderWidth: 0,
           backgroundColor: ['#F7464A', '#46BFBD'],
           hoverBackgroundColor: ['#FF5A5E', '#5AD3D1']
-        }
-        ]
+        }],
+        clientId: Math.random().toString(36).substring(7)
       },
       {
         chartType: 'pie',
@@ -44,8 +44,8 @@ export class DashboardComponent implements OnInit {
           hoverBorderWidth: 0,
           backgroundColor: ['#4D5360', '#46BFBD'],
           hoverBackgroundColor: ['#FF5A5E', '#5AD3D1']
-        }
-        ]
+        }],
+        clientId: Math.random().toString(36).substring(7)
       },
       {
         chartType: 'pie',
@@ -56,8 +56,8 @@ export class DashboardComponent implements OnInit {
           hoverBorderWidth: 0,
           backgroundColor: ['#FDB45C', '#46BFBD'],
           hoverBackgroundColor: ['#FF5A5E', '#5AD3D1']
-        }
-        ]
+        }],
+        clientId: Math.random().toString(36).substring(7)
       },
       {
         chartType: 'pie',
@@ -68,9 +68,9 @@ export class DashboardComponent implements OnInit {
           hoverBorderWidth: 0,
           backgroundColor: ['#949FB1', '#46BFBD'],
           hoverBackgroundColor: ['#FF5A5E', '#5AD3D1']
-        }
-        ]
+        }],
+        clientId: Math.random().toString(36).substring(7)
       },
-      ];
+    ];
   }
 }
